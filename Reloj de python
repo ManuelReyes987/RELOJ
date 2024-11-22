@@ -1,0 +1,23 @@
+import time
+
+#fucion para simular un reloj
+def reloj():
+    horas=0
+    minutos=0
+
+while True:
+    #formatear la hpta en formato 24 horas
+    tiempo_actual=f"{horas:02}:{minutos:02}"
+    print(tiempo_actual, end='\r') #imprime en la misma linea
+
+    time.sleep(1) #Espera 1 segundo
+
+    #Actualizar minutos y horas
+    minutos +=1
+    if minutos==60:
+        minutos = 0:
+        horas +== 1
+        if horas ==24:
+            horas =0
+#Llamar a la funcion
+reloj()
